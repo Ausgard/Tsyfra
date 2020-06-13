@@ -1,0 +1,26 @@
+@import "./utils/vars.scss";
+@import "./utils/mixins";
+@import "./utils/fonts";
+
+//modules
+
+@import "./modules/header/index.scss";
+@import "./modules/top-content/index.scss";
+
+.icon-snowflake {
+    display: flex;
+    width: 41.14px;
+    height: 30.64px;
+}
+
+#img-menu-burger {
+    display: flex;
+    width: 48px;
+    height: 32px;
+}
+
+.icon-logo {
+    display: flex;
+    width: 48px;
+    height: 32px;
+}

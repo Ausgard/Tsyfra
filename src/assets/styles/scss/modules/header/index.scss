@@ -1,0 +1,27 @@
+.header {
+    @include flexGrid(row, space-between, center, nowrap);
+    position: relative;
+    width: 87.85%;
+    height: 9.443vw;
+    max-height: 129px;
+    margin: 0 auto;
+}
+
+.header__logo {
+    width: 48px;
+    height: 32px;
+    z-index: 2;
+}
+
+.header__menu-btn {
+    width: 24px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0 4px 0 0;
+    svg {
+        width: inherit;
+        height: inherit;
+    }
+}

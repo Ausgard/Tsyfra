@@ -1,0 +1,12 @@
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="img-logo">
+		<g>
+			<circle cx="16" cy="16" r="16" fill="#316099"/><circle xmlns="http://www.w3.org/2000/svg" cx="32" cy="16" r="15" fill="white" stroke="#316099" stroke-width="2"/><path xmlns="http://www.w3.org/2000/svg" fill="#316099" d="M39.3 22L34.38 8H30.96L26.06 22H29.04L29.88 19.48H35.46L36.3 22H39.3ZM32.68 11.18L34.6 16.9H30.76L32.68 11.18Z"/>
+		</g>
+	</symbol>
+    <symbol id="img-menu-burger">
+        <g>
+            <path fill="#356EAD" d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z"/>
+        </g>
+    </symbol>
+</svg>
