@@ -8,16 +8,17 @@
     text-transform: $textTransform;
     text-decoration: $textDecoration;
     color: $fontColor;
-@media (max-width: $tabletWidth + px) {
-    font-size: $baseFontSize + px;
-}
+    @media (max-width: $tabletWidth + px) {
+        font-size: $baseFontSize + px;
+    }
 
-@media (min-width: $desktopWidth + px) {
-    font-size: $maxFontSize + px;
-}
+    @media (min-width: $desktopWidth + px) {
+        font-size: $maxFontSize + px;
+    }
 }
 
 //checkboxes
+
 @mixin hideCheckbox() {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -28,7 +29,7 @@
     overflow: hidden;
 }
 
-//grids
+//flex-grids
 
 @mixin flexGrid($f-direction, $j-content, $a-items, $f-wrap) {
     display: flex;
@@ -37,6 +38,13 @@
     align-items: $a-items;
     flex-wrap: $f-wrap;
 }
+
+$f-direction: row;
+$j-content: flex-start;
+$a-items: flex-start;
+$f-wrap: nowrap;
+
+//pseudo element
 
 @mixin pseudo($p-width, $p-height, $p-top, $p-right, $p-bottom, $p-left) {
     display: flex;
@@ -69,11 +77,11 @@ $p-left: 0;
     background-color: $bg-color;
  }
 
-$b-type: solid;
-$b-size: 2px;
-$b-color: red; 
+$b-type: none;
+$b-size: none;
+$b-color: none; 
 $t-left: 5px; 
 $t-right: 5px; 
 $b-right: 5px; 
 $b-left: 5px;
-$bg-color: rgba(green, 1);
+$bg-color: transparent;

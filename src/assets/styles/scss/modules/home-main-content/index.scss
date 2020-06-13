@@ -1,0 +1,82 @@
+.home-main-content {
+    @include flexGrid(column, space-between, $a-items, wrap);
+    align-content: space-between;
+    max-width: 940px;
+    width: 68.815vw;
+    max-height: 1342px;
+    height: 98.244vw;
+    padding: 0 0 15.5% 0;
+    margin: 0 auto;
+}
+
+.home-main-content__headline {
+    @include fontOptions (30, 36, $mainFont, 700, 46px, 0.05em, $textDecoration, $textTransform, rgba(#316099, 1));
+    max-width: 361px;
+    width: 26.428vw;
+    height: auto;
+    margin: 20.17% 0 0 0;
+}
+
+.home-main-content__card {
+    @include flexGrid(column, $j-content, center, $f-wrap);
+    max-width: 380px;
+    width: 27.819vw;
+    height: 39.1%;
+    background-color: #ffffff;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    
+    &:nth-of-type(1) {
+        margin: 17.1% auto auto 8.5%;
+        img {
+            margin: 12.5% 15.5% 0 0;
+        }
+    }
+
+    &:nth-of-type(2) {
+        margin: 20.4% 0 0 1%;
+        img {
+            position: relative;
+            top: -4.1%;
+            left: 1.5%;
+            bottom: 0;
+            right: 0;
+        }
+        h3 {
+            margin-top: 7.3%;
+        }
+    }
+
+    &:nth-of-type(3) {
+        margin: 1% 0 0 1%;
+        img {
+            margin: 12.6% 10.5% 0 0;
+        }
+    }
+}
+
+.home-main-content__card-sub{
+    @include fontOptions (18, 20, $mainFont, 600, 30px, 0.028em, $textDecoration, $textTransform, rgba($fontColor, 1));
+    padding: 0 10% 0 12.5%;
+    margin: 14.3% 0 0.1% 0;
+}
+
+.home-main-content__card-deskription {
+    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba($fontColor, 0.6));
+    padding: 0 14% 0 12.5%;
+    margin: auto 0;
+}
+
+.home-main-content__card-btn {
+    @include fontOptions (13, 14, $mainFont, 700, 214.2%, 0.05em, $textDecoration, $textTransform, rgba($accentBlue, 1));
+    @include btnCentered ($b-type, $b-size, $b-color, $t-left, $t-right, $b-right, $b-left, $bg-color);
+    justify-content: space-between;
+    width: 32.37%;
+    padding: 0 0 0 0;
+    margin: auto 42.5% 12.8% 0;
+    svg {
+        width: 16px;
+        height: 16px;
+        margin: 0 0 0 5%; 
+    }
+}
