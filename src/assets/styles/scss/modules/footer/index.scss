@@ -1,0 +1,50 @@
+.footer {
+    width: 100%;
+    height: 869px; //
+    background-color: $accentBlue;
+}
+
+.footer__container {
+    @include flexGrid(column, $j-content, center, $f-wrap);
+    width: 93%;
+    background-color: #316099;
+    border-radius: 0 200px 0 0;
+    border-bottom: 1px solid rgba(#ffffff, 0.4);
+}
+
+.footer__contact {
+    @include flexGrid(column, center, flex-start, wrap);
+    height: 28.624vw;
+    width: 62.958vw;
+    max-width: 860px;
+    padding: 0 0 0 1.1%;
+}
+
+.footer__headline {
+    @include fontOptions (34, 36, $mainFont, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    max-width: 320px;
+    width: 23.426vw;
+    min-width: 293px;
+}
+
+.footer__deskription {
+    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
+    max-width: 465px;
+    width: auto;
+    margin: 0 0 5.4% 0;
+}
+
+.footer__popup {
+    @include fontOptions (14, 16, $mainFont, 400, 26px, 0.06em, $textDecoration, capitalize, rgba(#ffffff, 1));
+    @include btnCentered (none, $b-size, $b-color, 10px, 10px, 10px, 10px, rgba($accentBlue, 1));
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    max-width: 220px;
+    max-height: 56px;
+    min-width: 153px;
+    min-height: 40px;
+    width: 16.106vw;
+    height: 4.1vw;
+    margin: auto 0 19.8% 0;
+    padding: 0;
+    align-self: flex-end;
+}
