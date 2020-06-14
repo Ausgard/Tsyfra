@@ -42,7 +42,7 @@
             bottom: 0;
             right: 0;
         }
-        h3 {
+        h4 {
             margin-top: 7.3%;
         }
     }
@@ -56,21 +56,20 @@
 }
 
 .home-main-content__card-sub{
-    @include fontOptions (18, 20, $mainFont, 600, 30px, 0.028em, $textDecoration, $textTransform, rgba($fontColor, 1));
-    padding: 0 10% 0 12.5%;
+    @include fontOptions (18, 20, $mainFont, 600, 150%, 0.028em, $textDecoration, $textTransform, rgba($fontColor, 1));
+    padding: 0 0 0 1.5%;
     margin: 14.3% 0 0.1% 0;
+    width: 76.5%;
 }
 
 .home-main-content__card-deskription {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba($fontColor, 0.6));
-    padding: 0 14% 0 12.5%;
-    margin: auto 0;
+    @include fontOptions (14, 16, $mainFont, 400, 163.5%, 0.05em, $textDecoration, $textTransform, rgba($fontColor, 0.6));
+    width: 74%;
 }
 
-.home-main-content__card-btn {
-    @include fontOptions (13, 14, $mainFont, 700, 214.2%, 0.05em, $textDecoration, $textTransform, rgba($accentBlue, 1));
-    @include btnCentered ($b-type, $b-size, $b-color, $t-left, $t-right, $b-right, $b-left, $bg-color);
-    justify-content: space-between;
+.home-main-content__card-link {
+    @include fontOptions (13.5, 14, $mainFont, 700, 214.2%, 0.05em, $textDecoration, $textTransform, rgba($accentBlue, 1));
+    @include flexGrid($f-direction, space-between, center, $f-wrap);
     width: 32.37%;
     padding: 0 0 0 0;
     margin: auto 42.5% 12.8% 0;

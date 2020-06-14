@@ -41,12 +41,11 @@ module.exports = {
 
         new CopyWebpackPlugin({
             patterns: [
-                {from: path.resolve(__dirname, 'src/assets/img/favicon.ico'), to: path.resolve(__dirname, 'dist/assets/img/favicon.ico')}
+                {from: path.resolve(__dirname, 'src/assets/img'), to: path.resolve(__dirname, 'dist/assets/img')}
+                // {from: path.resolve(__dirname, 'src/assets/fonts/'), to: path.resolve(__dirname, 'dist/assets/fonts/')}
             ]
         }),
-        new webpack.SourceMapDevToolPlugin({
-            filename: '[file].map'
-          }),
+        new webpack.SourceMapDevToolPlugin()
     ],
     module: {
         rules: [
@@ -57,11 +56,18 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     {
                       loader: 'css-loader',
-                      options: { sourceMap: true }
+                      options: {
+                          sourceMap: true
+                        }
                     },
                     {
                       loader: 'postcss-loader',
-                      options: { sourceMap: true, config: { path: 'src/assets/js/postcss.config.js' } }
+                      options: {
+                          sourceMap: true,
+                          config: {
+                              path: 'src/assets/js/postcss.config.js'
+                            }
+                        }
                     }
                 ]
             },
@@ -72,15 +78,24 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     {
                       loader: 'css-loader',
-                      options: { sourceMap: true }
+                      options: {
+                        sourceMap: true
+                        }
                     },
                     {
                       loader: 'postcss-loader',
-                      options: { sourceMap: true, config: { path: 'src/assets/js/postcss.config.js' } }
+                      options: {
+                          sourceMap: true,
+                          config: {
+                              path: 'src/assets/js/postcss.config.js'
+                            }
+                        }
                     },
                     {
                       loader: 'sass-loader',
-                      options: { sourceMap: true }
+                      options: {
+                          sourceMap: true
+                        }
                     }
                   ]
             },
@@ -88,10 +103,6 @@ module.exports = {
                 test: /\.(png|jpg|gif|webp|svg)$/,
                 use: ['file-loader'],
             },
-            // {
-            //     test: /\.svg$/,
-            //     loader: ['svg-inline-loader']
-            // },
             {
                 test: /\.(ttf|woff|woff2|eot)$/,
                 use: ['file-loader']

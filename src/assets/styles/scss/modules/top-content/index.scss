@@ -10,7 +10,8 @@
 .top-content__headline {
     @include fontOptions (54, 64, $headlineFont, 700, 1.16, 0.04em, $textDecoration, $textTransform, rgba($fontColor, 1));
     margin: 3.65% 0 0 15.52%;
-    max-width: 512px;
+    width: 41%;
+    max-width: 572px;
 }
 
 .top-content__deskription {

@@ -1,0 +1,53 @@
+.clients {
+    @include flexGrid($f-direction, center, $a-items, $f-wrap);
+    width: 100%;
+    height: 1549px; //
+    border-radius: 200px 0px 0px 0px;
+    background-color: rgba($accentBlue, 1);
+}
+
+.clients__container {
+    @include flexGrid($f-direction, space-between, $a-items, wrap);
+    align-content: flex-start;
+    max-width: 945px;
+    width: 69.181vw;
+}
+
+.clients__headline {
+    @include fontOptions (34, 36, $mainFont, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    margin: 10% 0 0 0.25%;
+    max-width: 223px;
+    width: 17.326vw;
+}
+
+.clients__deskription {
+    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
+    margin: 10.1% 9% 0 0%;
+    max-width: 538px;
+    width: auto;
+}
+
+.clients__list {
+    @include flexGrid($f-direction, $j-content, $a-items, wrap);
+    width: auto;
+    margin: 12% auto 0 auto;
+}
+
+.clients__link {
+    @include fontOptions (18, 20, $mainFont, 500, 230%, 0.02em, $textDecoration, uppercase, rgba(#ffffff, 1));
+    @include flexGrid($f-direction, center, center, $f-wrap);
+    width: 17.204vw;
+    height: 9.371vw;                //235x128
+    max-width: 235px;
+    max-height: 128px;
+    &:last-of-type {
+        background-color: rgba($fontColor, 0.2);
+        text-transform: capitalize;
+    }
+    &:not(:nth-last-of-type(-n+4)) {
+        border-bottom: 1px solid #ffffff;   
+    }
+    &:not(:nth-of-type(4n)) {
+        border-right: solid 1px #ffffff;
+    }
+}
