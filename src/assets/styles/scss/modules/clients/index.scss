@@ -37,7 +37,7 @@
     @include fontOptions (18, 20, $mainFont, 500, 230%, 0.02em, $textDecoration, uppercase, rgba(#ffffff, 1));
     @include flexGrid($f-direction, center, center, $f-wrap);
     width: 17.204vw;
-    height: 9.371vw;                //235x128
+    height: 9.371vw;
     max-width: 235px;
     max-height: 128px;
     &:last-of-type {
@@ -45,7 +45,7 @@
         text-transform: capitalize;
     }
     &:not(:nth-last-of-type(-n+4)) {
-        border-bottom: 1px solid #ffffff;   
+        border-bottom: 1px solid #ffffff;
     }
     &:not(:nth-of-type(4n)) {
         border-right: solid 1px #ffffff;
