@@ -10,7 +10,7 @@
 }
 
 .home-main-content__headline {
-    @include fontOptions (30, 36, $mainFont, 700, 46px, 0.05em, $textDecoration, $textTransform, rgba(#316099, 1));
+    @include fontOptions (30, 36, $mainFont_sb, 700, 46px, 0.05em, $textDecoration, $textTransform, rgba(#316099, 1));
     max-width: 361px;
     width: 26.428vw;
     height: auto;
@@ -43,7 +43,7 @@
             right: 0;
         }
         h4 {
-            margin-top: 7.3%;
+            margin-top: 7%;
         }
     }
 
@@ -56,7 +56,7 @@
 }
 
 .home-main-content__card-sub{
-    @include fontOptions (18, 20, $mainFont, 600, 150%, 0.028em, $textDecoration, $textTransform, rgba($fontColor, 1));
+    @include fontOptions (18, 20, $mainFont_sb, 400, 150%, 0.05em, $textDecoration, $textTransform, rgba($fontColor, 1));
     padding: 0 0 0 1.5%;
     margin: 14.3% 0 0.1% 0;
     width: 76.5%;
@@ -65,6 +65,7 @@
 .home-main-content__card-deskription {
     @include fontOptions (14, 16, $mainFont, 400, 163.5%, 0.05em, $textDecoration, $textTransform, rgba($fontColor, 0.6));
     width: 74%;
+    padding-right: 2px;
 }
 
 .home-main-content__card-link {

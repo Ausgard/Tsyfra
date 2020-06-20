@@ -15,17 +15,17 @@
 }
 
 .clients__headline {
-    @include fontOptions (34, 36, $mainFont, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    @include fontOptions (34, 36, $mainFont_sb, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
     margin: 10% 0 0 0.25%;
-    max-width: 223px;
-    width: 17.326vw;
+    max-width: 226px;
+    width: 17.946vw;
 }
 
 .clients__deskription {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
     margin: 10.1% 9% 0 0%;
     max-width: 538px;
-    width: auto;
+    width: 41vw;
 }
 
 .clients__list {

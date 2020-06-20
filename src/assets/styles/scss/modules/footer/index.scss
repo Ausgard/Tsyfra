@@ -18,7 +18,7 @@
     height: auto;
     width: 69%;
     max-width: 876.5px;
-    padding: 88.92px 0 100.50px 0;
+    padding: 88.92px 0 97.50px 0;
     margin: 0 0 0 0;
     &:after {
         @include pseudo(200%, 1px, 100%, $p-right, $p-bottom, -100%);
@@ -32,15 +32,15 @@
 }
 
 .footer__headline {
-    @include fontOptions (34, 36, $mainFont, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
-    max-width: 320px;
-    width: 23.426vw;
+    @include fontOptions (34, 36, $mainFont_sb, 500, 127.7%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    max-width: 335.02px;
+    width: 24.526vw;
     min-width: 293px;
     margin: 0 0 0 0;
 }
 
 .footer__deskription {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
+    @include fontOptions (14, 16, $mainFont, 400, 163.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 0.6));
     max-width: 465px;
     width: auto;
     margin: 7.5% 0 0 0;
@@ -56,7 +56,7 @@
     min-height: 40px;
     width: 16.106vw;
     height: 4.1vw;
-    margin: 0.8% 0 0 0;
+    margin: 0.5% 0 0 0;
     padding: 0;
 }
 
@@ -70,7 +70,7 @@
 
 .footer__contacts {
     @include flexGrid(row, flex-end, flex-start, wrap);
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
     width: 21.889vw;
     max-width: 299px;
     margin: 106.11px 0 0 0;
@@ -83,7 +83,7 @@
 }
 
 .footer__logo-text {
-    @include fontOptions (26, 28, $mainFont, 500, 100%, 0.02em, $textDecoration, $textTransform, rgba(#ffffff, 1));
+    @include fontOptions (26, 28, $mainFont_sb, 500, 100%, 0.02em, $textDecoration, $textTransform, rgba(#ffffff, 1));
     width: 77.7%;
     margin: 0 0 14.2% auto;
 }
@@ -91,10 +91,10 @@
 .footer__logo-adress {
     position: relative;
     padding: 0 0 0 12.7%;
-    margin: 0 0 7.5% 0;
+    margin: 0 0 6.5% 0;
     &:after {
         @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, 4px);
-        @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
+        @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
         content: 'a.';
     }
 }
@@ -105,7 +105,7 @@
     margin: 0 0 0 12.6%;
    &:after {
     @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, -35px);
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
     content: 't.';
 }
 }
@@ -113,11 +113,11 @@
 .footer__logo-mail {
     position: relative;
     width: 100%;
-    margin: 8.6% 0 0 12.7%;
+    margin: 8.1% 0 0 12.7%;
     &:after {
         @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, -35px);
-        @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
-        content: 'e.';
+        @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
+        content: 'e';
     }
 }
 
@@ -125,7 +125,7 @@
     margin:  95.17px 0 0 12.15%;
     padding: 0 0 0 0;
         :nth-child(1) a {
-            @include fontOptions (18, 20, $mainFont, 700, 150%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
+            @include fontOptions (18, 20, $mainFont_sb, 700, 150%, 0.05em, $textDecoration, $textDecoration, rgba(#ffffff, 1));
             margin: 0 0 10% 0;
         }
     }
@@ -136,19 +136,19 @@
         margin: 0 0 20.2% 0;
     }
     &:nth-of-type(n+2) {
-        margin: 0 0 10.6% 0;
+        margin: 0 0 10% 0;
     }
 }
 
 .footer__about-link {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
 }
 
 .footer__social {
     margin:  95.17px 0 0 9.1%;
     padding: 0 0 0 0;
     :nth-child(1) a {
-        @include fontOptions (18, 20, $mainFont, 700, 150%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
+        @include fontOptions (18, 20, $mainFont_sb, 700, 150%, 0.05em, $textDecoration, $textDecoration, rgba(#ffffff, 1));
         margin: 0 0 10% 0;
     }
 }
@@ -156,19 +156,19 @@
 .footer__social-item {
     list-style: none;
     &:nth-of-type(n-1) {
-        margin: 0 0 32% 0;
+        margin: 0 0 34% 0;
     }
     &:nth-of-type(n+2) {
-        margin: 0 0 16.5% 0;
+        margin: 0 0 16.4% 0;
     }
 }
 
 .footer__social-link {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 1));
 }
 
 .footer__copyright {
-    @include fontOptions (14, 16, $mainFont, 400, 162.5%, 0.05em, $textDecoration, capitalize, rgba(#ffffff, 0.4));
+    @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, $textDecoration, rgba(#ffffff, 0.4));
     width: 100vw;
-    margin: 62.6px 0 0 0;
+    margin: 61.6px 0 0 0.3%;
 }
