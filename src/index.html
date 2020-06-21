@@ -271,5 +271,26 @@
             </div>
         </section>
     </footer>
+    <form class="contact-form" action="#" method="POST">
+        <h4 class="contact-form__headline">SEND US MESSAGE</h4>
+        <div class="contact-form__name">
+            <label for="your-name">Full name</label>
+            <input name="your-name" id="your-name" type="text" placeholder="your name">
+        </div>
+        <div class="contact-form__e-mail">
+            <label for="your-mail">Email</label>
+            <input name="your-mail" id="your-mail" type="text" placeholder="your email">
+        </div>
+        <div class="contact-form__message">
+            <p class="contact-form__message-text">Message</p>
+            <textarea name="client-message" id="client-message" cols="30" rows="10" placeholder="Your message"></textarea>
+        </div>
+        <button class="contact-form__btn" type="submit">submit</button>
+        <!-- <button class="contact-form__close-btn" type="button">
+            <svg >
+                <use href="assets/img/sprite.svg#cancel" xlink:href="assets/img/sprite.svg#cancel"></use>
+            </svg>
+        </button> -->
+    </form>
 </body>
 </html>
