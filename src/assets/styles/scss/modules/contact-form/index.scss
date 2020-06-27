@@ -1,6 +1,6 @@
 .contact-form {
     @include flexGrid(column, $j-content, center, $f-wrap);
-    display: flex;
+    display: none;
     width: 39.532vw;
     height: 58.566vw;
     max-width: 540px;
