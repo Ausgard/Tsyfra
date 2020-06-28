@@ -52,3 +52,26 @@
         border-right: solid 1px #ffffff;
     }
 }
+
+@media screen and (max-width: $tabletWidth + px) {
+    .clients__headline {
+        font-size: 30px;
+    }
+
+    .clients__deskription {
+        margin: 10.1% 2% 0 0;
+    }
+
+    .clients__list {
+        width: 70vw;
+    }
+
+    .clients__link {
+        width: 16.5vw;
+        height: 8.5vw;
+        font-size: 15px;
+        &:nth-last-of-type(n+5) {
+            display: none;
+        }
+    }
+}
