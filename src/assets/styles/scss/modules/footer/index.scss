@@ -69,11 +69,11 @@
 }
 
 .footer__contacts {
-    @include flexGrid(row, flex-end, flex-start, wrap);
+    @include flexGrid(row, flex-start, flex-start, wrap);
     @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, $textTransform, rgba(#ffffff, 1));
     width: 21.889vw;
     max-width: 299px;
-    margin: 106.11px 0 0 0;
+    margin: 107px 0 0 0;
 }
 
 .footer__logo {
@@ -84,16 +84,16 @@
 
 .footer__logo-text {
     @include fontOptions (26, 28, $mainFont_sb, 500, 100%, 0.02em, $textDecoration, $textTransform, rgba(#ffffff, 1));
-    width: 77.7%;
-    margin: 0 0 14.2% auto;
+    width: auto;
+    margin: 0 auto 14% 5%;
 }
 
 .footer__logo-adress {
     position: relative;
-    padding: 0 0 0 12.7%;
-    margin: 0 0 6.5% 0;
+    // padding: 0 0 0 12.7%;
+    margin: 0 0 6.5% 12.7%;
     &:after {
-        @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, 4px);
+        @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, -34px);
         @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, uppercase, rgba(#ffffff, 1));
         content: 'a.';
     }
@@ -171,4 +171,36 @@
     @include fontOptions (14, 16, $mainFont, 400, 163%, 0.05em, $textDecoration, $textDecoration, rgba(#ffffff, 0.4));
     width: 100vw;
     margin: 61.6px 0 0 0.3%;
+}
+
+@media screen and (max-width: $tabletWidth + px) {
+
+    .footer__talk {
+        @include flexGrid(column, space-between, flex-start, wrap);
+        padding: 10% 0;
+    }
+
+    .footer__headline {
+        font-size: 30px;
+    }
+
+    .footer__popup {
+        margin: 4.53% 0 0 0;
+    }
+
+    .footer__contacts {
+        margin: 14% 0 0 0;
+    }
+
+    .footer__logo-text {
+        font-size: 23px;
+    }
+
+    .footer__about {
+        margin: 13% 0 0 auto;
+    }
+
+    .footer__social {
+        margin: 13% 0 0 auto;
+    }
 }
