@@ -82,3 +82,20 @@
     left: 11.57%;
     z-index: 1;
 }
+
+@media screen and (max-width: $tabletWidth + px) {
+
+    .top-content__headline {
+        width: 50%;
+        font-size: 44px;
+        margin: 4.16% 0 0 15.52%;
+    }
+
+    .top-content__deskription {
+        margin: 3.4% 0 0 15.52%;
+    }
+
+    .top-content__more-btn {
+        margin: 5% 0 0 15.62%;
+    }
+}
