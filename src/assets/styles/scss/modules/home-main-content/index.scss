@@ -144,3 +144,24 @@
         }
     }
 }
+
+@media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
+    .home-main-content {
+        max-width: none;
+        width: 100vw;
+        padding: 0 0 10%;
+        margin: 0 0 0 0;
+    }
+
+    .home-main-content__headline {
+        width: auto;
+        font-size: 30px;
+        margin: 5% 0 2% 0;
+        padding: 0 6%;
+    }
+
+    .home-main-content__card {
+        width: 100vw;
+        box-shadow: 0px 0px 5px rgba(16,112,177,.2);
+    }
+}
