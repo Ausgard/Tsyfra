@@ -182,3 +182,24 @@
     }
 }
 
+@media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
+    .header {
+        padding: 5% 0;
+    }
+
+    .header__nav {
+        position: relative;
+        width: 100vw;
+        height: 10%;
+        margin: 5% 0 0 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        animation: none;
+    }
+
+    .header__nav-list {
+        @include flexGrid($f-direction, space-between, center, nowrap);
+    }
+}

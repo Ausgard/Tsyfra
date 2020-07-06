@@ -99,3 +99,48 @@
         margin: 5% 0 0 15.62%;
     }
 }
+
+@media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
+    .top-content {
+        @include flexGrid(column, $j-content, center, wrap);
+        height: 361.59px;
+    }
+
+    .top-content__headline {
+        width: auto;
+        font-size: 38px;
+        text-align: center;
+        padding: 0 6%;
+        margin: 6% 0 0 0;
+    }
+
+    .top-content__deskription {
+        text-align: center;
+        padding: 0 6%;
+        margin: 6% 0 0 0;
+    }
+
+    .top-content__more-btn {
+        margin: 6% 0 0 0;
+    }
+
+    .top-content__bg-block {
+        width: 100vw;
+        height: 73vh;
+        left: 0;
+        max-width: none;
+        max-height: none;
+    }
+
+    .top-content__bg {
+        display: none;
+    }
+
+    .top-content__bg-woman {
+    display: none;
+    }
+
+    .top-content__bg-man {
+        display: none;
+    }
+}
