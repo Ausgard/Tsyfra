@@ -1,6 +1,7 @@
 .footer {
     @include flexGrid(column, $j-content, flex-start, $f-wrap);
     width: 100%;
+    padding: 125.67px 0 0 0;
     background-color: $accentBlue;
 }
 
@@ -206,7 +207,7 @@
 
 @media screen and (max-width: $phoneWidth + px) and (min-width: $smPhoneWidth + px) {
     .footer__container {
-        width: 100vw;
+        width: 100%;
         border-radius: 0 150px 0 0;
     }
     .footer__headline {
@@ -234,5 +235,74 @@
 
     .footer__popup {
         margin: 5% 0 0 0;
+    }
+
+    .footer__info {
+        @include flexGrid(column, $j-content, center, wrap);
+        width: 100%;
+    }
+
+    .footer__contacts {
+        @include flexGrid(row, $j-content, flex-start, wrap);
+        width: 88vw;
+        max-width: none;
+        margin: 10% 0 5% 0;
+    }
+
+    .footer__logo {
+        margin: 0 0 0 0;
+    }
+
+    .footer__logo-text {
+        margin: 0 auto 0 5%;
+    }
+
+    .footer__logo-adress {
+        width: 100%;
+    }
+
+    .footer__logo-phone,
+    .footer__logo-adress,
+    .footer__logo-mail {
+        text-align: center;
+        margin: 5% 0 0 0;
+        &:after {
+            display: none;
+        }
+    }
+
+    .footer__about,
+    .footer__social {
+        width: 88vw;
+        max-width: none;
+        margin: 0 0 0 0;
+        :nth-child(1) a {
+            margin: 10% 0 0 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.4);
+        }   
+    }
+
+    .footer__about-item,
+    .footer__social-item {
+        @include flexGrid(row, center, center, wrap);
+        text-align: center;
+        &:nth-of-type(n) {
+            margin: 5% 0 0 0;
+        }
+        &:nth-of-type(1) {
+            text-align: left;
+            margin: 0 auto 0 12.1%;
+        }
+    }
+
+    .footer__about-link,
+    .footer__social-link {
+        width: 100vw;
+    }
+
+    .footer__copyright {
+        width: 100%;
+        margin: 10% 0 0 0;
+        text-align: center;
     }
 }
