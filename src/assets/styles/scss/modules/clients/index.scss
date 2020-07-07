@@ -78,3 +78,50 @@
         }
     }
 }
+
+@media screen and (max-width: $phoneWidth + px) and (min-width: $smPhoneWidth + px) {
+    .clients {
+        border-radius: 150px 0px 0px 0px;
+    }
+
+    .clients__headline {
+        font-size: 25px;
+        width: auto;
+        max-width: none;
+        margin: 13% 0 5% 0;
+    }
+
+    .clients__container {
+        @include flexGrid(column, flex-start, center, $f-wrap);
+        width: 88vw;
+    }
+
+    .clients__deskription {
+        margin: 0 0 0 0;
+        text-align: center;
+        width: auto;
+    }
+
+    .clients__list {
+        justify-content: center;
+        width: 100%;
+        margin: 10% 0 5% 0;
+    }
+
+    .clients__link {
+        width: 66.5vw;
+        height: 58.5vw;
+        max-width: 90%;
+        max-height: 323px;
+
+        &:nth-of-type(n) {
+            border-top: solid 1px #ffffff;
+            border-bottom: solid 1px #ffffff;
+            border-right: none;
+        }
+
+        &:not(:nth-of-type(5)) {
+            display: none;
+        }
+    }
+}
