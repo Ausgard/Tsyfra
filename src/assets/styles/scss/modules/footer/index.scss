@@ -90,7 +90,6 @@
 
 .footer__logo-adress {
     position: relative;
-    // padding: 0 0 0 12.7%;
     margin: 0 0 6.5% 12.7%;
     &:after {
         @include pseudo(19px, 26px, $p-top, $p-right, $p-bottom, -34px);
@@ -202,5 +201,38 @@
 
     .footer__social {
         margin: 13% 0 0 auto;
+    }
+}
+
+@media screen and (max-width: $phoneWidth + px) and (min-width: $smPhoneWidth + px) {
+    .footer__container {
+        width: 100vw;
+        border-radius: 0 150px 0 0;
+    }
+    .footer__headline {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .footer__talk {
+        @include flexGrid(column, $j-content, center, wrap);
+        width: 100%;
+    }
+    .footer__talk-text {
+        @include flexGrid(column, $j-content, center, wrap);
+        margin: 0 0 0 0;
+    }
+    .footer__headline {
+        width: 88vw;
+    }
+
+    .footer__deskription {
+        width: 88vw;
+        text-align: center;
+        margin: 5% 0 0 0;
+    }
+
+    .footer__popup {
+        margin: 5% 0 0 0;
     }
 }
