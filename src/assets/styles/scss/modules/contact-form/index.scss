@@ -52,6 +52,9 @@
             }
         }
     }
+    textarea {
+        text-transform: none;
+    }
 }
 
 textarea::placeholder,

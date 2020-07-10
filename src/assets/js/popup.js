@@ -72,6 +72,18 @@ function formHandler() {
         }
     }
     emailValidation(emailArr)
+
+    function messageValidation(inputMessage) {
+        if (inputMessage.value.length < 20) {
+            document.querySelector('.contact-form__message textarea[id=client-message][placeholder]').style.backgroundColor = '#ff020226';
+            inputMessage.setCustomValidity('Длина сообщения должна быть не менее 20 символов')
+        } else {
+            document.querySelector('.contact-form__message textarea[id=client-message][placeholder]').style.backgroundColor = '#28ff0226';
+            inputMessage.setCustomValidity('')
+        }
+    }
+    messageValidation(inputMessage)
+    console.log(inputMessage.value.length)
 }
 
 // xhr.open('GET', requestURL)
