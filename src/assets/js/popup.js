@@ -25,6 +25,7 @@ function formHandler() {
     event.preventDefault()
     let separator = ' ';
     nameArr = inputName.value.split(separator)
+    emailArr = inputEmail.value.split(separator)
 
     function nameValidation(nameArr) {
         let flag = false
@@ -51,6 +52,26 @@ function formHandler() {
         }
     }
     nameValidation(nameArr)
+
+    function emailValidation(emailArr) {
+        for (let i = 0; i < emailArr.length; i++) {
+            if (emailArr.length >= 2 || emailArr[i].length === 0) {
+                document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#ff020226';
+                inputEmail.setCustomValidity('Заполните в формате: "name@email.com"')
+            } else {
+                inputName.setCustomValidity('')
+                document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#28ff0226';
+            }
+        }
+        if (emailArr[0].includes('@')) {
+            inputName.setCustomValidity('')
+            document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#28ff0226';
+        } else {
+            document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#ff020226';
+            inputEmail.setCustomValidity('Заполните в формате: "name@email.com"')
+        }
+    }
+    emailValidation(emailArr)
 }
 
 // xhr.open('GET', requestURL)
