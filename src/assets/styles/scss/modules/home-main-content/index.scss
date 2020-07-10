@@ -147,6 +147,7 @@
 
 @media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
     .home-main-content {
+        align-content: center;
         max-width: none;
         width: 100%;
         padding: 0 0 10%;
