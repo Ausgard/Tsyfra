@@ -85,3 +85,14 @@ $t-right: 5px;
 $b-right: 5px; 
 $b-left: 5px;
 $bg-color: transparent;
+
+// centered elem
+
+@mixin centeredElem ($position) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+$position: statick;
