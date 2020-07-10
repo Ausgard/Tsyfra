@@ -33,3 +33,20 @@
         text-align: center;
     }
 }
+
+@media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
+    .success-popup {
+        max-width: 330px;
+        max-height: 129px;
+        width: 60vw;
+        height: 25vw;
+    }
+
+    .success-popup__svg {
+        width: 16vw;
+        height: 16vw;
+        max-width: 80px;
+        max-height: 80px;
+        margin-left: 15px;
+    }
+}

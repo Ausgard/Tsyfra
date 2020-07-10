@@ -116,3 +116,63 @@ textarea[id="client-message"] {
     box-shadow: 5px 10px 20px rgba(16, 112, 177, 0.2);
     margin: 13.2% 0 0 0;
 }
+
+@media screen and (max-width: $tabletWidth + px) {
+    .contact-form {
+        height: 575px;
+        width: 474px;
+    }
+    
+    .contact-form__headline {
+        margin: 6% 0 0 10.3%;
+    }
+
+    .contact-form__name,
+    .contact-form__e-mail,
+    .contact-form__message {
+        margin: 2.5% 0 0 0;
+        input {
+            width: 375px;
+            height: 63px;
+        }
+    }
+
+    textarea[id="client-message"] {
+        width: 375px;
+        height: 126px;
+    }
+
+    .contact-form__btn {
+        width: 375px;
+        height: 63px;
+        margin: 8% 0 0 0;
+    }
+}
+
+@media screen and (min-width: $smPhoneWidth + px) and (max-width: $phoneWidth + px) {
+    .contact-form {
+        width: 88vw;
+        height: auto;
+    }
+
+    .contact-form__name,
+    .contact-form__e-mail,
+    .contact-form__message {
+        input {
+            width: 70vw;
+            height: 11vw;        
+        }
+    }
+    .contact-form__message {
+        textarea[id=client-message] {
+            width: 70vw;
+            height: 20vw;
+        }
+    }
+    .contact-form__btn {
+        font-size: 14px;
+        width: 50vw;
+        height: 10.6vw;
+        margin: 5% 0 4% 0;
+    }
+}
