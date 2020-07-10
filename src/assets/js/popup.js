@@ -45,18 +45,9 @@ function formHandler() {
             let nameArrMod = []
             let nameArrModSymbol = []
             for (let i = 0; i < nameArr.length; i++) {
-                // nameArrMod.push(nameArr[i].replace(/[0-9]/g, ''))
-                nameArrMod.push(nameArr[i].replace(/[`~!@#$%^&*()_|+-=?;:'",.<>{}[]\/]/g, ''))
+                nameArrMod.push(nameArr[i].replace(/[0-9`~!@#$%^&*()_|[+-=?;:'",.<>{}]/g, ''))
             }
-            
-            // for (let i = 0; i < nameArr.length; i++) {
-            //     nameArrModSymbol.push(nameArrMod[i].replace(/[`~!@#$%^&*()_|+-=?;:'",.<>{}[]\/]/g, ''))
-            // }
-
             inputName.value = nameArrMod.join(' ')
-
-            console.log(nameArr)
-            console.log(nameArrMod)
         }
     }
     nameValidation(nameArr)
