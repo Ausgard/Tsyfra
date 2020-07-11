@@ -26,7 +26,8 @@ function formHandler() {
     let switchName
     let switchEmail
     let switchMessage
-    let separator = ' ';
+    let separator = ' '
+    let nameArrMod = []
     nameArr = inputName.value.split(separator)
     emailArr = inputEmail.value.split('')
 
@@ -48,7 +49,6 @@ function formHandler() {
         }
       
         if (flag === true) {
-            let nameArrMod = []
             for (let i = 0; i < nameArr.length; i++) {
                 nameArrMod.push(nameArr[i].replace(/[0-9`~!@#$%^&*()_|[+-=?;:'",.<>{}]/g, ''))
             }
@@ -103,20 +103,20 @@ function formHandler() {
 
     }
     messageValidation(inputMessage)
-
     if (switchName && switchEmail && switchMessage) {
         formData = {
-            name: nameArr,
-            email: emailArr,
+            name: nameArrMod[0],
+            surname: nameArrMod[1],
+            email: emailArr.join(''),
             message: inputMessage.value
         }
         formDataJson = JSON.stringify(formData)
         let xhr = new XMLHttpRequest()
-        xhr.responseType = 'json'
         xhr.open('POST', requestURL)
         xhr.setRequestHeader("Content-type", "application/json")
         xhr.onload = function() {
-            if (xhr.readyState === 4) {
+            console.log(xhr.responseType)
+            if (xhr.readyState === 4 && 200 < xhr.status < 299) {
                 showSuccessBlock ()
             }
         }
