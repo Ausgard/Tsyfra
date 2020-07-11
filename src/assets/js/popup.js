@@ -23,10 +23,12 @@ function formHandler() {
     event.preventDefault()
     let formData
     let formDataJson 
-    let validationSwitch
+    let switchName
+    let switchEmail
+    let switchMessage
     let separator = ' ';
     nameArr = inputName.value.split(separator)
-    emailArr = inputEmail.value.split(separator)
+    emailArr = inputEmail.value.split('')
 
     function nameValidation(nameArr) {
         let flag = false
@@ -35,50 +37,55 @@ function formHandler() {
                 document.querySelector('.contact-form__name input[placeholder]').style.backgroundColor = '#ff020226';
                 inputName.setCustomValidity('Заполните в формате: "Имя Фамилия"')
                 flag = false
-                validationSwitch = false
+                switchName = false
             }
             else {
                 inputName.setCustomValidity('')
                 document.querySelector('.contact-form__name input[placeholder]').style.backgroundColor = '#28ff0226';
                 flag = true
-                validationSwitch = true
+                switchName = true
             }
         }
       
         if (flag === true) {
             let nameArrMod = []
-            let nameArrModSymbol = []
             for (let i = 0; i < nameArr.length; i++) {
                 nameArrMod.push(nameArr[i].replace(/[0-9`~!@#$%^&*()_|[+-=?;:'",.<>{}]/g, ''))
             }
             inputName.value = nameArrMod.join(' ')
         }
-        return validationSwitch
+        return switchName
     }
     nameValidation(nameArr)
 
     function emailValidation(emailArr) {
         for (let i = 0; i < emailArr.length; i++) {
-            if (emailArr.length >= 2 || emailArr[i].length === 0) {
+            if (emailArr[i] === ' ') {
+                for (let i = 0; i < emailArr.length; i++) {
+                    for (let j = i + 1; j < emailArr.length;) {
+                        if (emailArr[i] === ' ') {
+                            emailArr.splice(i, 1);
+                        } else {
+                            j++;
+                        }
+                    }
+                }
                 document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#ff020226';
-                inputEmail.setCustomValidity('Заполните в формате: "name@email.com"')
-                validationSwitch = false
+                inputEmail.setCustomValidity('Заполните поле в формате: "name@email.com"')
             } else {
-                inputName.setCustomValidity('')
-                document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#28ff0226';
-                validationSwitch = true
+                let symbol = '@'
+                for (let i = 0; i < emailArr.length; i++) {
+                    if (emailArr[i] !== ' ' && emailArr[i] === '@' && emailArr.length > 6 && emailArr[0] !== symbol) {
+                        document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#28ff0226';
+                        inputEmail.setCustomValidity('')
+                        switchEmail = true
+                    } 
+                }
             }
         }
-        if (emailArr[0].includes('@')) {
-            inputName.setCustomValidity('')
-            document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#28ff0226';
-            validationSwitch = true
-        } else {
-            document.querySelector('.contact-form__e-mail input[placeholder]').style.backgroundColor = '#ff020226';
-            inputEmail.setCustomValidity('Заполните в формате: "name@email.com"')
-            validationSwitch = false
-        }
-        return validationSwitch
+        inputEmail.value = emailArr.join('')
+      return switchEmail
+      
     }
     emailValidation(emailArr)
 
@@ -86,18 +93,18 @@ function formHandler() {
         if (inputMessage.value.length < 20) {
             document.querySelector('.contact-form__message textarea[id=client-message][placeholder]').style.backgroundColor = '#ff020226';
             inputMessage.setCustomValidity('Длина сообщения должна быть не менее 20 символов')
-            validationSwitch = false
+            switchMessage = false
         } else {
             document.querySelector('.contact-form__message textarea[id=client-message][placeholder]').style.backgroundColor = '#28ff0226';
             inputMessage.setCustomValidity('')
-            validationSwitch = true
+            switchMessage = true
         }
-        return validationSwitch
+        return switchMessage
 
     }
     messageValidation(inputMessage)
 
-    if (validationSwitch) {
+    if (switchName && switchEmail && switchMessage) {
         formData = {
             name: nameArr,
             email: emailArr,
@@ -110,12 +117,12 @@ function formHandler() {
         xhr.setRequestHeader("Content-type", "application/json")
         xhr.onload = function() {
             if (xhr.readyState === 4) {
-                createAnswer ()
+                showSuccessBlock ()
             }
         }
         xhr.send(formDataJson)
     }
-    function createAnswer () {
+    function showSuccessBlock () {
         contactForm.classList.add('hidden')
         successBlock.classList.remove('hidden')
         window.addEventListener('click', closeSuccessBlock)
