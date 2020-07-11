@@ -107,7 +107,7 @@ function formHandler() {
         let xhr = new XMLHttpRequest()
         xhr.responseType = 'json'
         xhr.open('POST', requestURL)
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+        xhr.setRequestHeader("Content-type", "application/json")
         xhr.onload = function() {
             if (xhr.readyState === 4) {
                 createAnswer ()
