@@ -1,3 +1,14 @@
+- IE 11
+
+- Webpack 4
+
+- AJAX
+
+- SCSS
+
+- Native JS
+
+
 Требования:
 
 БЭМ
